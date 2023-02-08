@@ -1,0 +1,92 @@
+.item {
+    float: left;
+    list-style-type: none;
+    width: 150px;
+    margin-right: 20px;
+}
+
+#navBar {
+    width: 100%;
+    background: black;
+    position: relative;
+    padding: 15px 0px;
+    float: left;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    margin-bottom: 30px;
+}
+
+#navBar ul{
+    padding: 0;
+    margin: 0 0 0 50px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 45px;
+    display: block;
+    padding: 0px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.selector{
+    display: block;
+    position: absolute;
+    height: 65px;
+    left: 50px;
+    background-color: rgba(20, 30, 48, 0.9);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 150px;
+    bottom: 0;
+    transition: left 1s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.selector .right,
+.selector .left{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(20, 30, 48, 0.9);
+    bottom: 0px;
+}
+
+.selector .left{
+    left: -25px;
+}
+
+.selector .right{
+    right: -25px;
+}
+
+.selector .right:before,
+.selector .left:before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.selector .right:before{
+    bottom: 0;
+    right: -25px;
+}
+
+.selector .left:before{
+    bottom: 0;
+    left: -25px;
+}
+
+.active a{
+    color: white;
+}
+
+.item:hover > a{
+    color: white;
+}
